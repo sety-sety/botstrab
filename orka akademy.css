@@ -1,0 +1,1521 @@
+/* =====================================================
+   ARKA ACADEMY
+   MAIN STYLE
+   ===================================================== */
+
+
+/* =====================================================
+   1. GENERAL
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background-image: url("../nody-بك-گراند-به-انگلیسی-1723700408.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding-top: 110px;
+
+    font-family: Arial, sans-serif;
+
+    color: #123B5D;
+}
+
+
+/* =====================================================
+   2. GENERAL TEXT
+   ===================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+p {
+    line-height: 1.9;
+}
+
+/* ========================================
+   ARKA ACADEMY — PROFESSIONAL HEADER
+   ======================================== */
+
+.site-header {
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(1180px, 92%);
+
+    z-index: 1000;
+
+    background: rgba(8, 45, 70, 0.88);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(212, 175, 55, 0.38);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 14px 35px rgba(0, 0, 0, 0.20),
+        0 0 0 1px rgba(255, 255, 255, 0.03);
+
+    transition: all 0.3s ease;
+}
+
+
+/* محتوای هدر */
+
+.header-container {
+    min-height: 72px;
+
+    padding: 0 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* نام آرکا آکادمی */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    letter-spacing: -0.3px;
+
+    transition: all 0.3s ease;
+}
+
+.brand:hover {
+    color: #D4AF37;
+
+    transform: translateY(-1px);
+}
+
+
+/* منوی اصلی */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+}
+
+.main-nav a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 10px 0;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* خط طلایی زیر لینک */
+
+.main-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    right: 50%;
+    bottom: 2px;
+
+    width: 0;
+    height: 2px;
+
+    background: #D4AF37;
+
+    transform: translateX(50%);
+
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+.main-nav a:hover::after {
+    width: 70%;
+}
+
+
+/* دکمه ثبت نام */
+
+.header-register {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #D4AF37,
+        #B99224
+    );
+
+    border: none;
+
+    padding: 11px 24px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.header-register:hover {
+    color: #ffffff;
+
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        #E1C45A,
+        #C6A32E
+    );
+
+    box-shadow:
+        0 11px 25px rgba(0, 0, 0, 0.25),
+        0 0 18px rgba(212, 175, 55, 0.18);
+}
+
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        width: 94%;
+    }
+
+    .header-container {
+        padding: 0 20px;
+        gap: 18px;
+    }
+
+    .main-nav {
+        gap: 20px;
+    }
+
+    .main-nav a {
+        font-size: 14px;
+    }
+
+    .brand {
+        font-size: 20px;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        top: 10px;
+
+        width: 94%;
+
+        border-radius: 16px;
+    }
+
+    .header-container {
+        min-height: 62px;
+
+        padding: 0 15px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .header-register {
+        padding: 9px 16px;
+
+        font-size: 13px;
+
+        border-radius: 10px;
+    }
+
+}
+
+/* =====================================================
+   4. HERO
+   ===================================================== */
+
+.hero-content {
+    position: relative;
+
+    max-width: 900px;
+
+    margin: 50px auto 100px;
+
+    padding: 75px 50px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.18),
+            rgba(255, 255, 255, 0.08)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.30);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.hero-content h1 {
+    color: white;
+
+    font-size: clamp(40px, 6vw, 64px);
+
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.40);
+}
+
+.hero-content p {
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+    color: rgba(255, 255, 255, 0.90);
+
+    font-size: 19px;
+
+    line-height: 2;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =====================================================
+   5. REGISTER BUTTON
+   ===================================================== */
+
+.register-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #123B5D;
+
+    border: 2px solid #D4AF37;
+
+    color: white;
+
+    padding: 13px 36px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+
+    transition: 0.35s ease;
+}
+
+.register-btn:hover {
+    background: #D4AF37;
+
+    color: #123B5D;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.30),
+        0 0 20px rgba(212, 175, 55, 0.18);
+}
+
+
+/* =====================================================
+   6. BOOKS
+   ===================================================== */
+
+.books-section {
+    max-width: 1180px;
+
+    margin: 120px auto;
+
+    padding: 60px 30px;
+}
+
+.books-section h2 {
+    position: relative;
+
+    color: #123B5D;
+
+    font-size: clamp(32px, 5vw, 44px);
+
+    text-align: center;
+
+    margin-bottom: 75px;
+}
+
+.books-section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 3px;
+
+    margin: 18px auto 0;
+
+    background: #D4AF37;
+}
+
+
+/* گروه کتاب */
+
+.book-group {
+    margin-bottom: 80px;
+}
+
+.book-group h3 {
+    color: #123B5D;
+
+    font-size: 30px;
+
+    text-align: right;
+
+    margin-bottom: 30px;
+
+    padding-right: 18px;
+
+    border-right: 4px solid #D4AF37;
+}
+
+
+/* لیست */
+
+.book-list {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* کتاب */
+
+.book-item {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(255, 255, 255, 0.68)
+        );
+
+    border: 1px solid rgba(18, 59, 93, 0.12);
+
+    border-radius: 4px 22px 22px 22px;
+
+    box-shadow:
+        0 15px 35px rgba(18, 59, 93, 0.09);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.book-item::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background: #D4AF37;
+}
+
+.book-item::after {
+    content: "";
+
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    left: -35px;
+    bottom: -45px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.book-item:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 22px 45px rgba(18, 59, 93, 0.15);
+}
+
+.book-item h4 {
+    color: #123B5D;
+
+    font-size: 21px;
+
+    margin-bottom: 12px;
+}
+
+.book-item p {
+    color: #52616B;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin: 0;
+}
+
+/* ========================================
+   AGE COURSES — PROFESSIONAL
+   ======================================== */
+
+.age-section {
+    max-width: 1100px;
+
+    margin: 100px auto;
+
+    padding: 70px 55px;
+
+    background: rgba(225, 245, 252, 0.78);
+
+    border-radius: 32px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    box-shadow:
+        0 20px 50px rgba(18, 59, 93, 0.12);
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* عنوان بخش */
+
+.age-section h2 {
+    color: #123B5D;
+
+    font-size: 40px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+/* شبکه دوره‌ها */
+
+.age-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+}
+
+
+/* کارت گروه سنی */
+
+.age-item {
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    padding: 34px 32px;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(212, 175, 55, 0.35);
+
+    box-shadow:
+        0 10px 28px rgba(18, 59, 93, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* خط طلایی ظریف */
+
+.age-item::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        #123B5D,
+        #D4AF37,
+        #123B5D
+    );
+}
+
+
+/* Hover */
+
+.age-item:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(212, 175, 55, 0.7);
+
+    box-shadow:
+        0 18px 38px rgba(18, 59, 93, 0.13);
+}
+
+
+/* عنوان گروه سنی */
+
+.age-item h3 {
+    color: #123B5D;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+
+/* متن */
+
+.age-item p {
+    color: #355568;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    margin-bottom: 12px;
+}
+
+
+/* ========================================
+   AGE COURSES — MOBILE
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .age-section {
+        margin: 70px 15px;
+
+        padding: 45px 25px;
+
+        border-radius: 25px;
+    }
+
+
+    .age-section h2 {
+        font-size: 31px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .age-list {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+
+    .age-item {
+        padding: 30px 23px;
+    }
+
+
+    .age-item h3 {
+        font-size: 22px;
+    }
+
+
+    .age-item p {
+        font-size: 15px;
+    }
+
+}
+
+/* ========================================
+   WHY ARKA ACADEMY
+   ======================================== */
+
+.features-section {
+    max-width: 1100px;
+    margin: 100px auto;
+    padding: 70px 55px;
+
+    background: rgba(225, 245, 252, 0.82);
+
+    border-radius: 32px;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    box-shadow:
+        0 20px 50px rgba(18, 59, 93, 0.12);
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* عنوان بخش */
+
+.features-heading {
+    max-width: 780px;
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+.features-heading span {
+    display: block;
+
+    color:#123B5D ;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+.features-heading h2 {
+    color: #123B5D;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    margin-bottom: 22px;
+}
+
+.features-heading p {
+    color: #29485A;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    margin: 0;
+}
+
+
+/* لیست ویژگی‌ها */
+
+.features-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 70px;
+    row-gap: 45px;
+}
+
+
+/* هر ویژگی */
+
+.feature {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 22px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid rgba(18, 59, 93, 0.15);
+}
+
+
+/* شماره */
+
+.feature-number {
+    flex-shrink: 0;
+
+    color: #B18A22;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    min-width: 35px;
+
+    padding-top: 2px;
+}
+
+
+/* عنوان ویژگی */
+
+.feature h3 {
+    color: #123B5D;
+
+    font-size: 21px;
+    font-weight: 750;
+
+    margin: 0 0 10px;
+}
+
+
+/* توضیح ویژگی */
+
+.feature p {
+    color: #355568;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin: 0;
+}
+
+
+/* حرکت ظریف هنگام Hover */
+
+.feature {
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateX(-5px);
+}
+
+
+/* ========================================
+   FEATURES — MOBILE
+   ======================================== */
+
+@media (max-width: 700px) {
+
+    .features-section {
+        margin: 70px 15px;
+
+        padding: 45px 25px;
+
+        border-radius: 25px;
+    }
+
+    .features-heading {
+        margin-bottom: 45px;
+    }
+
+    .features-heading h2 {
+        font-size: 32px;
+    }
+
+    .features-heading p {
+        font-size: 15px;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .feature {
+        gap: 16px;
+
+        padding-bottom: 25px;
+    }
+
+    .feature h3 {
+        font-size: 19px;
+    }
+
+    .feature p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =====================================================
+   9. TEACHER
+   ===================================================== */
+
+.teacher-section {
+    max-width: 1100px;
+
+    margin: 120px auto;
+
+    padding: 80px 30px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.teacher-info {
+    max-width: 800px;
+
+    padding-right: 35px;
+
+    border-right: 4px solid #D4AF37;
+}
+
+.teacher-section h2 {
+    color: #123B5D;
+
+    font-size: clamp(34px, 5vw, 46px);
+
+    margin-bottom: 35px;
+}
+
+.teacher-info h3 {
+    color: #123B5D;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.teacher-info h4 {
+    color: #D4AF37;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+.teacher-info p {
+    color: #52616B;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    margin-bottom: 18px;
+}
+
+.teacher-specialties {
+    margin-top: 35px;
+}
+
+.teacher-specialties h4 {
+    color: #123B5D;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+.teacher-specialties ul {
+    padding-right: 20px;
+}
+
+.teacher-specialties li {
+    color: #52616B;
+
+    margin-bottom: 10px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   10. CONTACT
+   ===================================================== */
+
+.contact-section {
+    max-width: 1100px;
+
+    margin: 120px auto 80px;
+
+    padding: 90px 40px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18, 59, 93, 0.96),
+            rgba(8, 45, 70, 0.96)
+        );
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 25px 60px rgba(18, 59, 93, 0.22);
+}
+
+.contact-content > span {
+    color: #D4AF37;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.contact-content h2 {
+    color: white;
+
+    font-size: clamp(30px, 5vw, 45px);
+
+    margin: 18px auto;
+
+    max-width: 700px;
+}
+
+.contact-content > p {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 16px;
+
+    line-height: 2;
+}
+
+.contact-actions {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.contact-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 120px;
+
+    padding: 12px 22px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(212, 175, 55, 0.65);
+
+    border-radius: 50px;
+
+    transition: 0.3s ease;
+}
+
+.contact-link:hover {
+    background: #D4AF37;
+
+    color: #123B5D;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   11. RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+    .main-nav {
+        gap: 16px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .book-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .age-list {
+        grid-template-columns: 1fr;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET / MOBILE
+   ===================================================== */
+
+@media (max-width: 700px) {
+
+    body {
+        padding-top: 90px;
+
+        background-attachment: scroll;
+    }
+
+    .site-header {
+        top: 12px;
+
+        width: 94%;
+
+        border-radius: 16px;
+    }
+
+    .header-container {
+        min-height: 64px;
+
+        padding: 0 16px;
+    }
+
+    .brand {
+        font-size: 18px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .header-register {
+        padding: 9px 16px;
+
+        font-size: 13px;
+    }
+
+    .hero-content {
+        margin: 35px 15px 70px;
+
+        padding: 55px 25px;
+
+        border-radius: 25px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .books-section,
+    .age-section,
+    .features-section,
+    .teacher-section {
+        margin: 80px auto;
+
+        padding: 45px 20px;
+    }
+
+    .book-list {
+        grid-template-columns: 1fr;
+    }
+
+    .book-group h3 {
+        font-size: 25px;
+    }
+
+    .age-item {
+        padding: 30px 25px 30px 60px;
+    }
+
+    .teacher-info {
+        padding-right: 22px;
+    }
+
+    .contact-section {
+        margin: 70px 15px 40px;
+
+        padding: 65px 25px;
+
+        border-radius: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 450px) {
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .books-section h2,
+    .age-section h2,
+    .features-heading h2,
+    .teacher-section h2 {
+        font-size: 30px;
+    }
+
+    .book-item {
+        padding: 27px 23px;
+    }
+
+    .contact-actions {
+        flex-direction: column;
+    }
+
+    .contact-link {
+        width: 100%;
+    }
+
+}
+
+/* ========================================
+   TEXT SECTIONS - LIGHT SKY GLASS
+   ======================================== */
+
+.hero-content,
+.features-section,
+.teacher-section {
+    background: rgba(190, 225, 240, 0.48);
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 30px rgba(18, 59, 93, 0.08);
+}
+
+
+/* خوانایی بهتر متن */
+
+.hero-content p,
+.features-heading p,
+.feature p,
+.teacher-info p {
+    text-shadow:
+        0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+/* عنوان‌های اصلی */
+
+.features-heading h2,
+.teacher-section h2 {
+    color: #123B5D;
+}
+
+.hero-content p,
+.features-heading p,
+.feature p,
+.teacher-info p {
+    color: #0a2337;
+
+    font-weight: 500;
+
+    text-shadow:
+        0 1px 2px rgba(255, 255, 255, 0.052);
+}
+
+.teacher-name {
+    font-size: 38px;
+    font-weight: 800;
+    color: #123B5D;
+    margin: 15px 0 20px;
+    letter-spacing: -0.5px;
+}
+
+.teacher-name::after {
+    content: "مدرس زبان انگلیسی";
+    display: block;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    color: #55758A;
+
+    margin-top: 10px;
+}@media (max-width: 576px) {
+    .teacher-name {
+        font-size: 30px;
+    }
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
+.contact-section {
+    max-width: 1050px;
+    margin: 100px auto 80px;
+    padding: 65px 50px;
+
+    background: rgba(225, 245, 252, 0.65);
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(212, 175, 55, 0.25);
+
+    box-shadow:
+        0 18px 45px rgba(18, 59, 93, 0.10);
+}
+
+
+/* عنوان */
+
+.contact-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.contact-heading span {
+    display: block;
+
+    color: #B18A22;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+}
+
+.contact-heading h2 {
+    color: #123B5D;
+
+    font-size: 38px;
+    font-weight: 800;
+
+    margin-bottom: 20px;
+}
+
+.contact-heading p {
+    color: #355568;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    margin: 0;
+}
+
+
+/* گزینه‌های ارتباط */
+
+.contact-links {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* هر گزینه */
+
+.contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 21px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(18, 59, 93, 0.10);
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(212, 175, 55, 0.6);
+
+    box-shadow:
+        0 12px 28px rgba(18, 59, 93, 0.10);
+}
+
+
+/* آیکون */
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #123B5D;
+
+    color: #D4AF37;
+
+    border-radius: 14px;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+
+/* متن */
+
+.contact-item strong {
+    display: block;
+
+    color: #123B5D;
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.contact-item span {
+    display: block;
+
+    color: #557181;
+
+    font-size: 14px;
+}
+
+
+/* موبایل */
+
+@media (max-width: 700px) {
+
+    .contact-section {
+        margin: 70px 15px;
+
+        padding: 45px 22px;
+
+        border-radius: 25px;
+    }
+
+    .contact-heading h2 {
+        font-size: 30px;
+    }
+
+    .contact-heading p {
+        font-size: 15px;
+    }
+
+    .contact-links {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        padding: 18px;
+    }
+
+}
